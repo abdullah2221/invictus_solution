@@ -1,0 +1,75 @@
+
+$primary-color: #652d90;
+$secondary-color: #fef200;
+.primary {
+  color: $primary-color;
+}
+
+.secondary {
+  color: $secondary-color;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+.text-blue{
+  color: #0063af;
+}
+.bg-blue {
+  background-color: #0063af;
+}
+.heebo-light {
+  font-family: "Heebo", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+.heebo {
+  font-family: "Heebo", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.heebo-bold {
+  font-family: "Heebo", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.heebo-medium {
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+h1 {
+  @extend .heebo-bold;
+  font-size: 71px;
+}
+
+h3 {
+  @extend .heebo-light;
+  font-size: 36px;
+}
+
+h5 {
+  @extend .heebo-medium;
+  font-size: 3rem;
+  color: $primary-color;
+}
+
+
+.nav-link.nav-p{
+  &:hover{
+    color: white!important;
+  }
+}

@@ -1,0 +1,122 @@
+.hero-slider {
+  height: 100vh;
+  background-color: #000;
+  background-image: url("/assets/images/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  p {
+      font-size: 24px;
+  }
+  .bt_bb_section_bottom_section_coverage_image {
+      bottom: -1px;
+  }
+
+  .w-40{
+    width: 40%;
+  }
+
+  @-webkit-keyframes blink {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+
+  @-moz-keyframes blink {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+
+  @keyframes blink {
+      0% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  .bt_bb_section_bottom_section_coverage_image {
+      position: absolute;
+      right: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 0;
+      bottom: 0;
+      img {
+          width: 100%;
+      }
+  }
+  .c-1 {
+      position: absolute;
+      bottom: -20px;
+
+      width: 337px;
+      height: 337px;
+      background: rgb(101, 45, 144);
+      background: linear-gradient(180deg, rgba(101, 45, 144, 1) 49%, rgba(0, 99, 175, 1) 100%);
+      animation: float 6s ease-in-out infinite;
+      border-radius: 50%;
+      opacity: 0.5;
+  }
+
+  .c-2 {
+      width: 337px;
+      height: 337px;
+      background: rgb(101, 45, 144);
+      background: linear-gradient(180deg, rgba(254, 242, 0, 1) 49%, rgb(101, 45, 144) 100%);
+      border-radius: 50%;
+      opacity: 0.5;
+      position: absolute;
+      right: 20px;
+      bottom: -138px;
+
+      animation: float 4s ease-in-out infinite;
+  }
+
+  .c-3 {
+      width: 337px;
+      height: 337px;
+      background: rgba(0, 99, 175, 1);
+      border-radius: 50%;
+      opacity: 0.5;
+      position: absolute;
+      top: -35%;
+      left: 75px;
+
+      animation: floatx 8s ease-in-out infinite;
+  }
+
+  .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .hero-slider {
+      height: 70vh;
+      span {
+          font-size: 32px;
+      }
+  }
+}
+[data-aos=flip-down].aos-animate{
+  transform: perspective(2500px) rotateX(0);
+}
+
+[data-aos=flip-down]{
+  transform: perspective(2500px) rotateX(
+90deg);
+}
+
+

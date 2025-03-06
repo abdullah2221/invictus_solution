@@ -1,0 +1,80 @@
+<section class="page-title-section portfolio-banner">
+    <div class="c-3"></div>
+    <div class="overlay px-5 d-flex flex-column align-items-center justify-content-center position-relative">
+        <h6 class="text-white text-center mb-4">
+            Let's Start a New Project Together
+        </h6>
+        <form [formGroup]="FormData" method="POST" (ngSubmit)="onSubmit()">
+            <div class="input-group mb-3">
+                <input type="email" name="email" formControlName="email" class="form-control rounded-pill"
+                    placeholder="Enter Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <button type="submit" class="btn btn-primary rounded-pill input-group-text" id="basic-addon2">
+                    Request Free Consultation
+                </button>
+            </div>
+
+            <!-- Show validation errors -->
+            @if (res().length > 0) {
+                <div class="text-white">
+                    <ul>
+                        @for (errorMsg of res(); track errorMsg) {
+                            <li>{{ errorMsg }}</li>
+                        }
+                    </ul>
+                </div>
+            }
+        </form>
+
+        @if (alertmessage()) {
+            <div class="wrapper-animation">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+                <span class="text-white"> {{ positive() }}</span>
+            </div>
+        }
+    </div>
+    <div class="bt_bb_section_bottom_section_coverage_image">
+        <img src="assets/images/wave.png" alt="Wave Image" class="img-fluid" />
+    </div>
+</section>
+
+<section class="portfolio-section">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="d-flex h-100 mb-5 text-center flex-column justify-content-center">
+                <h3 class="sub-heading text-blue fw-bold">Project Gallery</h3>
+                <p class="px-sm-5 mx-sm-5">
+                    Our goal is not just to develop a website, online store, mobile
+                    application, Search engine optimization and close the project, but to
+                    create a tool to achieve certain business goals. That’s why Invictus
+                    Solutions is developing and producing globally known products.
+                </p>
+            </div>
+
+            @for (project of projects; track project.id) {
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card mb-md-0 h-100 hvr-icon-wobble-horizontal w-100">
+                        <div class="card-header p-0">
+                            <img [src]="project.img" class="card-img-top" alt="{{ project.title }}" />
+                            @if (project.url) {
+                                <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                                    <a [href]="project.url" target="_blank" class="text-white">Visit Now</a>
+                                </div>
+                            }
+                        </div>
+            
+                        <div class="card-body text-center">
+                            <p class="lead">{{ project.description }}</p>
+                            <h4 class="card-title mt-2">{{ project.title }}</h4>
+                        </div>
+                    </div>
+                </div>
+            }
+            
+            
+            
+        </div>
+    </div>
+</section>

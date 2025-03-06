@@ -1,0 +1,102 @@
+<footer id="footer">
+    <svg viewBox="0 0 120 20">
+      <defs>
+        <mask id="xxx">
+          <circle cx="7" cy="12" r="40" fill="url(#linear)" />
+        </mask>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 13 -9" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+        <path id="wave"
+          d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+      </defs>
+      <use id="wave3" class="wave2" xlink:href="#wave" x="0" y="-2"></use>
+      <use id="wave2" class="wave3" xlink:href="#wave" x="0" y="0"></use>
+      <g class="gooeff">
+        <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+      </g>
+    </svg>
+  
+    <div class="content">
+      <div class="container">
+        <div class="row py-5">
+          <!-- Left Column -->
+          <div class="col-sm-4">
+            <div class="info text-white pe-5">
+              <a routerLink="/"> 
+                <img src="assets/images/logo.png" alt="Logo" class="img-fluid logo">
+              </a>
+              <p class="heebo-light my-3">
+                Invictus Solutions is a software development organization offering top-notch services
+                to businesses of all kinds.
+              </p>
+              <p class="heebo-light my-3">
+                Tell us about your <b>Business Needs</b>. We will <b>Help</b> you to take it <b>Forward</b>.
+              </p>
+              <div class="d-flex flex-column">
+                <span>
+                  <i class="fas fa-envelope me-2"></i>
+                  <a href="mailto:info&#64;invictussolutions.co">info&#64;invictussolutions.co</a>
+                </span>
+                <span>
+                  <i class="fas fa-globe me-1"></i>
+                  <a href="https://invictussolutions.co/">Invictussolutions.co</a>
+                </span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Middle Column -->
+          <div class="col-sm-4">
+            <div class="location pe-5">
+              <span class="headline_superheadline text-white d-flex">Locations</span>
+              <h5>Where To Find Us</h5>
+              <a href="https://goo.gl/maps/8vHJwav6zXNFExNLA" target="_blank">
+                <img src="assets/images/img-footer-map.png" alt="Location Map">
+              </a>
+              <div class="d-flex flex-column justify-content-end align-items-end">
+                <div class="w-100">
+                  <a href="tel:+920412408084">
+                    <i class="fas fa-map-marker-alt me-2"></i> Faisalabad: +92 (041) 2408084
+                  </a>
+                </div>
+                <div class="w-100">
+                  <a href="tel:+920412408084">
+                    <i class="fas fa-map-marker-alt me-2"></i> Lahore: +92 300 0880001
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Right Column -->
+          <div class="col-sm-4">
+            <div class="text-white">
+              <span class="headline_superheadline d-flex">Invictus Solutions</span>
+              <h5>Follow Us</h5>
+            </div>
+            <ul class="d-flex ps-0 social-icons">
+              <li><a href="https://www.facebook.com/invictussolution/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/invictusolution" target="_blank"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="https://pk.linkedin.com/company/invictussolutions" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row mx-0">
+      <div class="col-12 bg-blue py-2">
+        <p class="heebo-light text-white my-1 text-center">
+          © 2023 Copyright Reserved: <span class="fw-bold">Invictus Solutions</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  

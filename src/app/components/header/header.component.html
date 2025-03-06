@@ -1,0 +1,128 @@
+<div class="header">
+    <nav class="navbar pt-4 pt-sm-3 navbar-expand-lg navbar-light bg-light"   (scroll)="onscroll()"
+    [ngClass]="navbarfixed ? 'scrolled' : 'nofixed'">
+      <div class="container px-0">
+        <a class="navbar-brand ps-2 ps-sm-5" routerLink="/">
+          <img src="assets/images/logo.png" alt="Logo" class="img-fluid" />
+        </a>
+        <a class="navbar-brand-fixed ps-2 ps-sm-5" routerLink="/">
+          <img src="assets/images/logo-color.jpg" alt="Logo Color" class="img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="d-flex flex-column w-100 mt-3 mt-md-0">
+          <div class="topbar">
+            <ul class="w-100 mb-2 mb-lg-0 pt-2 pt-md-0">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="privacy-policy">Privacy Policy</a>
+              </li>
+              <li class="nav-item">
+                <p class="nav-link nav-p text-white mb-0">Visit our social pages</p>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.facebook.com/invictussolution/" target="_blank" class="nav-link pe-1">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://twitter.com/invictusolution" target="_blank" class="nav-link px-1">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.instagram.com/invictussolution/" target="_blank" class="nav-link px-1">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pt-2">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/services" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Services</a>
+              </li>
+              <li class="nav-item position-relative">
+                <a class="nav-link" routerLink="/careers" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Careers</a>
+                <span class="badge bg-danger text-white position-absolute top-0 start-100 translate-middle">Hiring</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/trainings" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Training Program</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/blog" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="tel:+923000880001" class="btn btn-primary rounded-pill px-4">
+                  <i class="fas fa-phone-alt pe-2"></i> <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="mobile-menu" [ngClass]="navbarfixed ? 'scrolled' : 'nofixed'">
+      <div class="device">
+        <div class="clor">
+          <a class="navbar-brand" routerLink="/">
+            <img src="assets/images/logo.png" alt="Logo" class="img-fluid" />
+          </a>
+          <a class="navbar-brand-fixed" routerLink="/">
+            <img src="assets/images/invictus.png" alt="Invictus Logo" class="img-fluid" />
+          </a>
+          <button id="burger" (click)="openMenu()" class="open-main-nav" [ngClass]="mobilenav ? 'is-open' : 'not-open'">
+            <span class="burger"></span>
+            <span class="burger-text">Menu</span>
+          </button>
+  
+          <nav class="main-nav" id="main-nav" [ngClass]="mobilenav ? 'is-open' : 'not-open'">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 pt-2">
+              <li class="nav-item">
+                <a class="nav-link" (click)="openMenu()" routerLink="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openMenu()" routerLink="/portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openMenu()" routerLink="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openMenu()" routerLink="/services">Services</a>
+              </li>
+              <li class="nav-item position-relative">
+                <a class="nav-link" (click)="openMenu()" routerLink="/careers">Careers</a>
+                <span class="badge bg-danger text-white position-absolute top-0 start-100 translate-middle">Hiring</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openMenu()" routerLink="/trainings">Training Program</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openMenu()" routerLink="/contact">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="openMenu()" routerLink="/blog">Blog</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  

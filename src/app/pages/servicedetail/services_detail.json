@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name" : "Digital Marketing",
+    "slug" : "digital-marketing",
+    "icon" : "assets/images/icons/outsourcing.png",
+    "img" : "assets/images/stire.jpg",
+    "desc" :" Digital Marketing includes marketing your business using digital platforms,including social media, websites, mobile applications, search engines etc.",
+     "content" : "Digital Marketing includes marketing your business using digital platforms, including social media, websites, mobile applications, search engines, etc. Ads Diary is making waves in digital marketing in Pakistan. Invictus Solutions helps brands grow by providing expertise in social media marketing, content marketing, video marketing, and web development. We expand on your ideas to let you control your image on the World Wide Web.",
+     "content2" : "<h6>Digital Marketing Stratergies: </h6>Digital marketing strategies can take your business to heights. Invictus Solutions provides the following digital marketing services to help you expand your business: <ul><li>Pay-Per-Click Marketing</li><li>Content Marketing</li><li>Social Media Marketing</li><li>Video Marketing</li><li>Graphic Designing</li><li>Search Engine Optimization (SEO)</li><li>Web Development</li></ul>"
+    },
+
+    {
+      "id": 2,
+      "name" : "Internet Of Things",
+      "slug" : "Iot",
+      "icon" : "assets/images/icons/website-development.png",
+      "img" : "assets/images/stire.jpg",
+      "desc" :" We, Invictus Solutions, provide services relating to The Internet of Things, or IoT which refers to the billions of physical devices around the world that",
+       "content" : "We, Invictus Solutions, provide services relating to The Internet of Things or IoT, which refers to the billions of physical devices around the world that are now connected to the internet, all collecting and sharing data. thanks to the arrival of super-cheap computer chips and the ubiquity of wireless networks, it's possible to turn anything, from something as small as a pill to something as big as an airplane, into a part of the IoT. Connecting up all these different objects and adding sensors to them adds a level of digital intelligence to devices that would be otherwise dumb, enabling them to communicate real-time data without involving a human being. Invictus solutions makes the fabric of the world around us more innovative and responsive, merging the digital and physical universes by IoT. ",
+       "content2" : "<p>Over the past few years, IoT has become one of the most critical technologies of the 21st century. Now that we can connect everyday objects kitchen appliances, cars, thermostats, baby monitors to the internet via embedded devices, seamless communication is possible between people, processes, and things. </p> <p>Physical things can share and collect data with minimal human intervention through low-cost computing, the cloud, big data, analytics, and mobile technologies. In this hyper-connected world, digital systems can record, monitor, and adjust each interaction between connected things. The physical world meets the digital world—and they cooperate </p> <h6>We are facilitating our clients from the following fields </h6> <ul> <li> Manufacturing </li>  <li> Automotive </li> <li> Transportation and Logistics </li> <li>  Public Sector </li> <li>  Healthcare </li> <li>General Safety Across All Industries </li></ul>"
+      },
+
+      {
+        "id": 3,
+        "name" : "Outsourcing Consultancy",
+        "slug" : "Outsourcing-Consultancy",
+        "icon" : "assets/images/icons/web-registraion.png",
+        "img" : "assets/images/stire.jpg",
+        "desc" :"  The practice of having certain job functions done outside a company instead of having an in-house department or employee handle ... ",
+         "content" : "Invictus Solutions facilitates our clients by outsourcing several tasks or services. They often outsource information technology services, including programming and application development, as well as technical support. They can frequently outsource customer service and call service functions. They can also outsource other types of work, including human resources tasks and financial processes such as book keeping and payroll processing. Companies can outsource entire divisions, such as their whole IT department, or just parts of a particular department.",
+         "content2" : " <h6> Outsourcing trends and future directions </h6> Outsourcing has been viewed to lower costs and gain efficiencies. It is increasingly becoming a strategic tool for companies. Leading companies understand that outsourcing some functions can help them gain a competitive advantage by allowing them to access expertise or innovative technologies they don't have in-house or by helping them deliver products or services more quickly or enabling them to shift resources to the areas of the business that are most critical. Outsourcing offers both cost efficiency and increased workload flexibility."
+        },
+
+        {
+          "id": 4,
+          "name" : "Software Development",
+          "slug" : "Software-Development",
+          "icon" : "assets/images/icons/seo.png",
+          "img" : "assets/images/stire.jpg",
+          "desc" :" Whether you are creating your product from scratch, re-engineering to update your technology stack, enhancing your systems, developing a web, desktop, or mobile application, or maintaining your solutions, our skilled experts can provide you with the right tools, technologies, and expertise to develop and implement innovative software solutions ",
+           "content" : "Whether you are creating your product from scratch, re-engineering to update your technology stack, enhancing your systems, developing a web, desktop, or mobile application, or maintaining your solutions, our skilled experts can provide you with the right tools, technologies, and expertise to develop and implement innovative software solutions.",
+           "content2" : "<h6> WHAT WE DO </h6> We Invictus Solutions don’t solely focus on providing you a solution to a problem or situation. Instead, we analyze and understand your business holistically to offer you the best technological answer. Our staff has broad experience and certifications in each area of expertise. At Invictus Solutions, you will find a company dedicated to best practices and methodologies. We ensure enterprise-grade application security through audit, testing, secure development practices, and training.<h6> HOW WE DO IT </h6> At Invictus Solutions, we implement innovative software solutions with cutting-edge technologies. In addition, we provide you not just an experienced professional in a specific technology but also an entire team of experts in many different fields to back them up. Invictus Solutions are closely supported by the Quality Team who applies the ISO 9001:2015 framework in which we are certified. "
+          },
+          {
+            "id": 5,
+            "name" : "Mobile App Development",
+            "slug" : "Mobile-Apps-Development",
+            "icon" : "assets/images/icons/mobile-app.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :" Simply put, Mobile Applications are dynamic websites combined with server-side programming which provide functionalities such as interacting with users, connecting to back-end databases, and generating results to browsers. Invictus Solutions have provided services related to Mobile Applications in Online Banking, Social Networking, Online Reservations, eCommerce / Shopping Cart Applications, Interactive Games, Online Training, Blogs, Online Forums, Content Management Systems, etc. ",
+             "content" : "<p>To improve your digital strategy and benefit from all the advantages of the mobile digital age, the mobile application allows you to open new distribution channels for your business. A dedicated application makes it possible to improve the visibility of brands, build customer loyalty, promote, locate products and services or even improve your company's business processes. Invictus Solutions have provided services related to Mobile Applications in Online Banking, Social Networking, Online Reservations, eCommerce / Shopping Cart Applications, Interactive Games, Online Training, Blogs, Online Forums, Content Management Systems, etc. <h6>Invictus Solutions at best in Technologies </h6> <p> We believe in two main categories of coding, scripting, and programming for creating Mobile Applications. Here are some latest technologies mentioned in which our experts are currently working. </p> </p> <ul><li>Flutter</li>  <li>Ionic</li>  <li>React Native</li>  <li>Android / Kotlin</li> <li>iOS / Swift </li></ul>",
+             "content2" : "<h6>Mobile Application Testing is the main process that guarantees our client’s satisfaction </h6> <p> Invictus Solutions believes that Testing is an important part of the Mobile Application Development process. Although testing would consume more manpower and time than development itself, We do not compromise on our quality goals. </p> <p> Invictus Solutions apply the following process for Mobile Apps testing </p> <ul><li>Quality Assurance and Bug Testing</li>  <li>Multiple Browser Compatibility</li>  <li>Application Security</li>  <li>Performance - Load and Stress Testing</li> <li> Usability Testing </li></ul>"
+          },
+          {
+            "id": 6,
+            "name" : "Web Development",
+            "slug" : "Web-Development",
+            "icon" : "assets/images/icons/business-applications.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :" Invictus delivers exceptional creative web development services through eye- catching web design, corporate brand development, and naming and slogan creation. Invictus's design team are not just front-end developers and template-based designers. ",
+             "content" : "<h6> Your website presents your company's status and character — Invictus Solutions will help you improve your image.</h6><p> Invictus delivers exceptional creative web development services through eye-catching web design, corporate brand development, and naming and slogan creation.Invictus's design team are not just 'front-end developers.' and 'template  based' designers. They are experienced in marketing, advertising, usability, and conceptual design. If you look at modern trends, most websites are designed by developers, the company's IT department or inexperienced web designers using template-based CMS without considering conceptual design, uniqueness, and quality user experience (UX).<br> Invictus's design team will give you an advantage over your competitors with aunique design that provides a powerful and appropriate user experience, an  experience that the viewer will remember and want to return for the 'wow factor'. Leveraging modern approaches to web development, we bring front-end, backend, and design together to meet your business needs and satisfaction. </p>",
+             "content2" : "<h6>BACK-END DEVELOPMENT </h6> <p> Our The Invisible Force Behind Your Product The backend of your web solution is everything that happens behind the scenes. While not visible, it's arguably the most critical piece of the software puzzle. If not developed properly, the entire system won't function smoothly. Our team is Highly-skilled in all modern backend technologies, skills, and languages they develop innovative web solutions that run exactly as intended. </p> <h6>FRONTEND-END DEVELOPMENT </h6> <p> Now Playing: A Seamless Front-End Experience If the backend is everything that happens behind the scenes, the front-end is what happens on stage. A successful front-end balances thoughtful design and seamless functionality to create a smooth experience when users view and interact with your product. Our front-end development team knows how to deliver exactly that. </p> <h6>WEB DEVELOPMENT QA </h6> <p> Testing Your Web Product to Ensure Succes Versed in comprehensive testing best practices, our quality assurance analysts work with your team to identify, fix, and prevent software quality issues. We use our mix of manual testing, compatibility testing, performance testing, automation engineering, and continuous integration. </p>"
+          },
+
+          {
+            "id": 7,
+            "name" : "Business Applications and Training",
+            "slug" : "Business-Applications-and-Training",
+            "icon" : "assets/images/icons/outsourcing.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :"  At Invictus Solutions, we offer effective and innovative business services for executives and growth-oriented companies. Our ... ",
+             "content" : "<p>We provide Business Applications and Training that used to enhance and monitor productivity of organizations. Business applications can range from large line-of-business systems to specialized tools. Consider all the applications that run on either client computers or servers, including commercial off-the-shelf products, customized third-party systems and internally developed systems.  </p><p>Traditional Enterprise Recourse Planning (ERP) and Customer Relationship Management (CRM) systems have been the backbone for organizational operations and efficiency for decades. Although a significant cost, ERP and CRM structures coexisted to manage processes and share data. Microsoft has since removed the complexity of these incompatible systems by creating more modern, integrated business applications that work together on a single platform, giving organizations the flexibility to adopt new technology and improve business outcomes. This digital transformation provides several benefits for organizations, including the ability to: </p> <ul><li>Transform products and services</li><li>Engage customers and build relationships</li><li>Empower employees</li><li>Optimize operations</li></ul>",
+             "content2" : "<p>Directions Training specializes in custom fit training solutions based on the unique needs of organizations, government entities, and individuals. Our Business Apps solutions make it easy to extend, tailor, and create customized solutions to meet your unique requirements. </p>"
+          },
+          {
+            "id": 8,
+            "name" : "SEO and Ecommerce Solutions",
+            "slug" : "SEO-and-Ecommerce-Solutions",
+            "icon" : "assets/images/icons/seo.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :"  From clicks to rank to revenue to costs, Active Media increases the return on your search engine marketing investment. ",
+             "content" : "<p>Invictus Solutions is a highly experienced and trusted provider of high-performance ecommerce software solutions. Invictus Solutions ecommerce platform is a widely acclaimed, enterprise grade solution that has been robustly developed to suit the most demanding bespoke business requirements. </p>.",
+             "content2" : "<h6>We have a track record delivering ecommerce solutions that are: </h6> <ul> <li>Goal driven </li> <li>On-time and on-budget </li> <li>Perfect fit </li> <li>High volume capable </li> <li> Truly scalable</li> <li> E-marketing / SEO friendly </li></ul> <p> SEO is one of the most effective, affordable ways to grow your ecommerce store and boost your revenue. When you rank at the top of search results, more people can find and contact your business. </p>"
+          },
+          {
+            "id": 9,
+            "name" : "System Security and Gap Analysis",
+            "slug" : "System-Security-and-Gap-Analysis",
+            "icon" : "assets/images/icons/business-applications.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :"  Integrated cybersecurity services to address your security challenges of today and tomorrow. ",
+             "content" : "<p>We provide gap analysis to other organization and their system for understand where to focus its security efforts for maximum security improvement. Additionally, there is often a compliance requirement, to obtain and maintain compliance with a particular standard or regulation. However, this is not the only reason for performing one. A primary purpose is to help organizations uncover risks and vulnerabilities and to improve their information security posture ultimately. </p> <p> A primary task of any information security professional is to manage perform an information security gap analysis to find potential security vulnerabilities and risks and to use the information to implement solutions to bridge the gaps </p>",
+             "content2" : "<p>The goal is to continually improve and move closer to the desired security position, and to transition security from its current state to its future improved state. Several critical steps in the process must always be addressed when conducting a useful gap analysis. Let’s look at them </p>"
+          },
+          {
+            "id": 10,
+            "name" : "Cloud Services",
+            "slug" : "Cloud-Services",
+            "icon" : "assets/images/icons/business-applications.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :" Whether you're looking for compute power, database storage, content delivery, or other functionality, ... ",
+             "content" : "<p> Invictus Solutions helps companies get the most out of cloud technologies by tailoring these solutions with careful consideration of companies’ business requirements and adjusting them to specific IT infrastructures. We provide cloud services that allows companies to add value to their businesses with cloud-based software development solutions. </p>",
+             "content2" : "<p> We are experts in Google Cloud Platform and we are proud ofit. Regardless of which service you are thinking about (IaaS, PaaS, SaaS), we will help you enter a higher level of your business.  </p>"
+          },
+          {
+            "id": 11,
+            "name" : "ERP Implementation & Integration",
+            "slug" : "ERP-Implementation-&-Integration",
+            "icon" : "assets/images/icons/mobile-app.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :" Integrate different departments of your organization to smoothen operations. ",
+             "content" : "<p>In Invictus Solutions, ERP software development services in Faisalabad are amongst our specialties. We believe that custom Enterprise Resource Planning solutions can provide companies with the tools and technology they need to succeed, regardless of industry. Our ERP developers take a “business first” approach, getting to know your company and your pain points. Then, we work with you as we build the business software you need to emerge as a dominant force in your industry. It’s this strategy that’s helped us earn our reputation as the best ERP development company in Faisalabad. </p>",
+             "content2" : "<p>  Well-architected ERP solutions can centralize your operations in a single secure, user-friendly interface. What’s more, we can integrate many powerful technologies, including encryption and blockchain technology, Machine Learning, Augmented Reality and more.</p>"
+          },
+          {
+            "id": 12,
+            "name" : "Networking Services",
+            "slug" : "Networking-Services",
+            "icon" : "assets/images/icons/seo.png",
+            "img" : "assets/images/stire.jpg",
+            "desc" :"Possessing developed skills that have been gained through establishing and developing full IT projects, networks and infrastructures from initial conception to completion. We provide services like Network Services include IP addressing, Domain Name System (DNS), primary domain email service, Internet access",
+             "content2" : "<p> Possessing developed skills that have been gained through establishing and developing full IT projects, networks and infrastructures from initial conception to completion. We provide services like Network Services include IP addressing, Domain Name System (DNS), primary domain email service, Internet access, web content filtering, security products such as firewalls, VPN termination and intrusion prevention systems (IPS), and the necessary tools and staff to support these services. </p>"
+          }
+
+
+
+  ]

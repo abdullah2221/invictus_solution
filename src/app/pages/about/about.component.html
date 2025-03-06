@@ -1,0 +1,116 @@
+<section class="page-title-section about">
+    <div class="c-3"></div>
+    <div class="overlay d-flex flex-column align-items-center justify-content-center">
+      <h3>About Us</h3>
+      <p class="px-5 text-center">
+        Invictus Solutions Pvt (Ltd) is an IT Software Company founded in 2017.
+        Invictus Solutions is a top software house in Pakistan and also a registered company in Pakistan (PSEB).
+      </p>
+    </div>
+    <div class="bt_bb_section_bottom_section_coverage_image">
+      <img [src]="'assets/images/wave-grey.png'" alt="Wave Grey Image" class="img-fluid" />
+    </div>
+  </section>
+  
+  <section class="ceo">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="img-group">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <img [src]="'assets/images/CEO.png'" class="img-fluid ceo-img" alt="CEO Image" />
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="d-flex h-100 px-md-5 flex-column justify-content-center">
+            <h3 class="h3 fw-normal">Farhan Tufail, CEO</h3>
+            <h2 class="mt-4 display-2 text-blue fw-bold">Our Approach Is Different!</h2>
+            <p>
+              At a Glance, when software helps you dream big, it's right! Since its inception, Invictus has been operating
+              with the ideology of adapting to the future. Our approach is different we not only help our clients adopt
+              new technology with agility, but we also facilitate them in sustaining that change.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="ceo-cards">
+    <div class="container">
+      <div class="row">
+        @for ( card of ceoCards; track card.id) {
+          <div class="col-lg-4 mb-5 mb-lg-0 col-md-6">
+            <div class="card h-100 shadow" [attr.data-aos]="'fade-up'" [attr.data-aos-duration]="card.duration">
+              <div class="card-body py-4 px-5">
+                <div class="mb-4">
+                  <img [src]="'assets/images/trust icon.png'" alt="Trust Icon" />
+                </div>
+                <h6 class="text-blue mt-4">{{ card.title }}</h6>
+                <p class="description">{{ card.description }}</p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+  
+  <section class="ios">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img class="iso-picture img-fluid" [attr.data-aos]="'fade-up'" [attr.data-aos-duration]="'300'"
+            [src]="'assets/images/iso-certified.png'" alt="ISO Certified" />
+        </div>
+  
+        <div class="col-lg-6 mt-5" [attr.data-aos]="'fade-right'" [attr.data-aos-duration]="'500'">
+          <h2 class="certified sub-heading text-blue fw-bold pt-2">ISO Certified</h2>
+          <p class="certified-paragraph pt-3">
+            Invictus Solution takes immense pride in being an ISO Certified organization, a testament to our unwavering
+            commitment to delivering unparalleled quality and excellence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="strategy about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5" [attr.data-aos]="'fade-right'" [attr.data-aos-duration]="'500'">
+          <div class="d-flex h-100 flex-column justify-content-center">
+            <h3 class="sub-heading text-blue fw-bold">Our Mission</h3>
+            <p>
+              We are in the business of digital transformation. Take full advantage of technology, expertise and ability
+              to simply allow our clients to meet their future today.
+            </p>
+            <ul class="list-unstyled">
+              @for ( mission of missionList; track mission.id) {
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="fas fa-check p-1 text-blue border border-primary rounded-circle me-3"></i>
+                  {{ mission.text }}
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="wrapper position-relative">
+            @for ( img of strategyImages; track img.id) {
+              <img [src]="'assets/images/' + img.src" class="img-fluid" [attr.data-aos]="img.animation" />
+            }
+          </div>
+          <div class="mbl-img">
+            <img [src]="'assets/images/Stratgy-image.png'" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+  
