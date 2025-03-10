@@ -25,8 +25,8 @@ export class CareerComponent implements OnInit {
   form: FormGroup;
 
   careersList = [
-    { name: "Software Engineer", description: "Exciting role in software development." },
-    { name: "UI/UX Designer", description: "Work on creative UI/UX designs." }
+    {id:1, name: "Software Engineer", description: "Exciting role in software development." },
+    {id:2, name: "UI/UX Designer", description: "Work on creative UI/UX designs." }
   ];
 
   constructor(

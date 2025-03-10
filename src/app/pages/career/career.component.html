@@ -73,56 +73,41 @@
 </section>
 <section class="job-listings">
   <div class="container">
-      <div class="row">
-          <div class="col-12">
-              <h2 class="sub-heading mb-4 text-blue fw-bold">Open Vacancies</h2>
-              <p *ngIf="careersList.length == 0">No open any vacancy</p>
+    <div class="row">
+      <div class="col-12">
+        <h2 class="sub-heading mb-4 text-blue fw-bold">Open Vacancies</h2>
 
-              <div ngbAccordion >
-                  <div ngbAccordionItem *ngFor="let c of careersList; let i = index" [id]="'panel-' + i">
-                      <h2 ngbAccordionHeader>
-                          <button ngbAccordionButton>{{ c.name }}</button>
-                      </h2>
-                      <div ngbAccordionCollapse>
-                          <div ngbAccordionBody>
-                              <div [innerHTML]="c.description" class="mb-3"></div>
+        @if (careersList.length === 0) {
+          <p>No open vacancies</p>
+        }
 
-                              <div class="col-12">
-                                  <button type="submit" class="btn btn-primary btn-sm rounded-pill px-3 text-center"
-                                      (click)="open(content, c, 'jobs-listing')">
-                                      Apply Now
-                                  </button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Old card-based layout (commented out) -->
-              <!-- <div class="card border-0 shadow p-3 rounded-5 mb-4" *ngFor="let c of careersList; let i=index;">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-2">
-                      <h3 class="text-blue fw-bold fs-3">{{c.name}}</h3>
-                    </div>
-                    <div class="col-md-8">
-                      {{c.description}}
-                    </div>
-                    <div class="col-md-2">
-                      <div class="d-flex h-100 justify-content-center align-items-center">
-                        <button type="submit" class="btn btn-primary rounded-pill fs-5 px-4 py-2 text-center"
-                            (click)="open(content, c)">
-                          Apply Now
-                        </button>
-                      </div>
-                    </div>
+        <div ngbAccordion>
+          @for (c of careersList; track c.id; let i = $index) {
+            <div ngbAccordionItem [id]="'panel-' + i">
+              <h2 ngbAccordionHeader>
+                <button ngbAccordionButton>{{ c.name }}</button>
+              </h2>
+              <div ngbAccordionCollapse>
+                <div ngbAccordionBody>
+                  <div [innerHTML]="c.description" class="mb-3"></div>
+                  <div class="col-12">
+                    <button type="button" class="btn btn-primary btn-sm rounded-pill px-3 text-center"
+                      (click)="open(content, c, 'jobs-listing')">
+                      Apply Now
+                    </button>
                   </div>
                 </div>
-              </div> -->
-          </div>
+              </div>
+            </div>
+          }
+        </div>
+
       </div>
+    </div>
   </div>
 </section>
+
+
 
 
 <section class="about-us">
