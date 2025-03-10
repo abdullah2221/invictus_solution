@@ -1,47 +1,47 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
+import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  // API URL from environment
-  private apiURL = 'https://api.invictussolutions.co/';
+  private http = inject(HttpClient);
+  private apiURL =  'https://api.invictussolutions.co/';
 
-  constructor(private http: HttpClient) {}
-
-  //  Create a method for headers (extendable in the future)
-  private getHeaderOptions() {
-    return {
-      headers: new HttpHeaders({
-        'Accept': 'application/json'
-      })
-    };
+  private get headers() {
+    return new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    });
   }
 
-  //  GET Method
+  // GET Method
   public get(endpoint: string): Observable<any> {
-    const url = `${this.apiURL}${endpoint}`;
-    return this.http.get<any>(url, this.getHeaderOptions()).pipe(
-      tap(() => console.log(`GET Request to: ${url}`)), //  Debugging (optional)
-      catchError(err => {
-        console.error('GET Error:', err); //  Logs error for debugging
-        return throwError(() => err);
-      })
+    return this.http.get<any>(`${this.apiURL}${endpoint}`, { headers: this.headers }).pipe(
+      catchError(this.handleError)
     );
   }
 
   // POST Method
   public post(endpoint: string, data: any): Observable<any> {
-    const url = `${this.apiURL}${endpoint}`;
-    return this.http.post<any>(url, data, this.getHeaderOptions()).pipe(
-      tap(() => console.log(`POST Request to: ${url} with data`, data)), //  Debugging (optional)
-      catchError(err => {
-        console.error('POST Error:', err); // Logs error for debugging
-        return throwError(() => err);
-      })
+    return this.http.post<any>(`${this.apiURL}${endpoint}`, data, { headers: this.headers }).pipe(
+      catchError(this.handleError)
     );
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    let errorMessage = 'An unknown error occurred!';
+    
+    if (error.error instanceof ErrorEvent) {
+      // Client-side error
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // Server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    
+    console.error(errorMessage);
+    return throwError(() => new Error(errorMessage));
   }
 }

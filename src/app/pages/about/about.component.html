@@ -110,6 +110,203 @@
     </div>
   </section>
 
+  <section class="industries pb-5 bg-white mb-md-0 vision">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="wrapper my-5 position-relative">
+            <img
+              [src]="'assets/images/industries/circle 2.png'"
+              alt=""
+              aos
+              aosAnimation="fade-left"
+              aosOffset="300"
+              aosDuration="500"
+              aosEasing="ease-in-sine"
+            />
+            <img
+              [src]="'assets/images/industries/circle1.png'"
+              alt=""
+              aos
+              aosAnimation="fade-right"
+              aosOffset="300"
+              aosDuration="500"
+              aosEasing="ease-in-sine"
+            />
+            <img
+              [src]="'assets/images/industries/circle3.png'"
+              alt=""
+              aos
+              aosAnimation="fade-left"
+              aosOffset="300"
+              aosDuration="500"
+              aosEasing="ease-in-sine"
+            />
+            <img
+              [src]="'assets/images/Layer85.png'"
+              alt=""
+              aos
+              aosAnimation="fade-right"
+              aosOffset="300"
+              aosDuration="500"
+              aosEasing="ease-in-sine"
+            />
+            <img
+              [src]="'assets/images/Layer84.png'"
+              alt=""
+              aos
+              aosAnimation="fade-down"
+              aosOffset="300"
+              aosDuration="500"
+              aosEasing="ease-in-sine"
+            />
+            <img
+              [src]="'assets/images/Layer86.png'"
+              alt=""
+              aos
+              aosAnimation="fade-right"
+              aosOffset="300"
+              aosDuration="500"
+              aosEasing="ease-in-sine"
+            />
+          </div>
+  
+          <div class="mbl-img">
+            <img
+              [src]="'assets/images/industries-we serve.png'"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+        </div>
+  
+        <div
+          class="col-lg-7"
+          aos
+          aosAnimation="flip-right"
+          aosOffset="300"
+          aosDuration="500"
+          aosEasing="ease-in-sine"
+        >
+          <div
+            class="d-flex h-100 mt-3 mt-md-5 text-start flex-column justify-content-center"
+          >
+            <h3 class="sub-heading text-blue fw-bold">Our Vision</h3>
+            <p>
+              In today’s world, it is essential to be mindful of human needs and
+              become increasingly more human responsive. Objectively, the needs of
+              your human resources need to be addressed incipiently before
+              expectations of outcome can be imagined. In earnest, quality will
+              follow once their needs are met unreservedly. Your humans will go on
+              and bring out an effectual change that influences how humans of the
+              world interact with your product.
+            </p>
+            <p>
+              Secondly, reality is, most firms are business-driven, pursuing
+              business goals rather than aligning their aims to meet those of the
+              clients. This encumbered approach incessantly inhibits growth and is
+              void of any benefits that might create an effectual change in the
+              world.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="affiliations ceo-cards">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="sub-heading text-blue text-center fw-bold">
+            Our Affiliations
+          </h3>
+          <p class="mb-5">
+            Invictus Solutions has gained a recognized position among Pakistani
+            corporations due to its steadfast commitment to training and
+            development initiatives. Invictus Solutions has ushered in a new era of
+            history. Invictus Solutions is a registered business and is associated
+            with the following prestigious organizations in both the public and
+            private sectors:
+          </p>
+        </div>
+  
+        <!-- Corrected @for loop with tracking -->
+        @for (affiliation of affiliations; track affiliation.id) {
+          <div class="col-md-4 text-center mb-3">
+            <div
+              class="card mx-3 h-100 shadow"
+              [class.yellow]="affiliation.isYellow"
+              aos
+              aosAnimation="fade-up"
+              aosDuration="500"
+            >
+              <div class="card-body py-4 px-5">
+                <div class="img-holder">
+                  <img [src]="affiliation.imgSrc" alt="Affiliation Logo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+
+  <section class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="d-flex h-100 mt-3 mt-md-5 text-start flex-column justify-content-center">
+            <div 
+              class="heading text-center" 
+              data-aos="flip-down" 
+              data-aos-offset="300" 
+              data-aos-duration="500" 
+              data-aos-easing="ease-in-sine">
+              <h5>WHY CHOOSE US</h5>
+            </div>
+  
+            <div 
+              class="sub-heading text-center" 
+              data-aos="flip-down" 
+              data-aos-offset="300" 
+              data-aos-duration="700" 
+              data-aos-easing="ease-in-sine">
+              <h3>WHAT WE BELIEVE IN VALUES</h3>
+            </div>
+  
+            <div class="row mt-5 our-values">
+              @for (value of valuesData; track value.title) {
+                <div class="col-md-4 mb-5">
+                  <div class="d-flex">
+                    <div class="me-3">
+                      <i class="far fa-check-circle"></i>
+                    </div>
+                    <div>
+                      <h4 class="">{{ value.title }}</h4>
+                      <p>{{ value.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              }
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+ 
+  
+  
+  
+  
 
 
   

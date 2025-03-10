@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports:[FormsModule,CommonModule,RouterModule],
+  imports:[FormsModule,CommonModule,RouterModule,ReactiveFormsModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

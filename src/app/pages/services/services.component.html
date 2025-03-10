@@ -1,0 +1,104 @@
+<section class="page-title-section services-banner">
+    <div class="c-3"></div>
+    <div class="overlay px-5 d-flex flex-column align-items-center justify-content-center">
+        <h5 class="text-white text-center mb-4">
+         WHAT WE OFFER
+        </h5>
+    </div>
+    <div class="bt_bb_section_bottom_section_coverage_image">
+        <img src="assets/images/wave.png"
+            alt="bt_bb_section_bottom_section_coverage_image" class="img-fluid">
+    </div>
+  
+  </section>
+
+
+  <section class="services" id="services">
+    <div class="container">
+      <div
+        class="heading text-center"
+        data-aos="flip-down"
+        data-aos-offset="300"
+        data-aos-duration="500"
+        data-aos-easing="ease-in-sine"
+      >
+        <h5>What We Offer</h5>
+      </div>
+      <div
+        class="sub-heading text-center"
+        data-aos="flip-down"
+        data-aos-offset="300"
+        data-aos-duration="700"
+        data-aos-easing="ease-in-sine"
+      >
+        <h3>BEST WAY TO SEE FUTURE IS TO CREATE IT.</h3>
+      </div>
+  
+      <div class="row cards pt-5">
+        @for (item of ServiceDetails; track $index) {
+          <div class="col-lg-4 col-md-6">
+            <div class="card card-9 stacked--fan-left yellow shadow">
+              <div class="card-body content text-center">
+                <img src="{{ item.icon }}" alt="" class="py-3" />
+  
+                <h6 class="mb-2">{{ item.name }}</h6>
+                <p class="mb-4">{{ item.desc }}</p>
+                <a
+                  [routerLink]="['/service-detail']"
+                  [queryParams]="{ slug: item.slug }"
+                >
+                  <img
+                    src="assets/images/icons/readmore-icon.png"
+                    alt=""
+                    class="img-fluid"
+                  />
+                  Read More...
+                </a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+  
+
+<!-- 
+        <div class="row cards pt-5">
+            <div class="col-lg-4 col-md-6" *ngFor="let item of ServiceDetails">
+                <div class="card card-9 stacked--fan-left yellow shadow">
+                    <div class="card-body content text-center">
+                        <img src='{{item.icon}}' alt="" class="py-3">
+  
+                        <h6 class="mb-2">
+                          {{item.name}}
+                        </h6>
+                        <p class="mb-4">
+                          {{item.desc}}
+                        </p>
+                        <a [routerLink]="['/service-detail']" [queryParams]="{ slug: item.slug}"><img src="assets/images/icons/readmore-icon.png" alt="" class="img-fluid"> Read
+                            More... </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+  

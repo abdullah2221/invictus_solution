@@ -1,0 +1,314 @@
+<!-- Page Title Section -->
+<section class="page-title-section career">
+  <div class="c-3"></div>
+  <div class="overlay d-flex flex-column align-items-center justify-content-center">
+    <h3>Careers</h3>
+    <p class="px-5 text-center">
+      Join our team and be a part of our mission to innovate the world as we
+      strive to solve real-world problems.
+    </p>
+  </div>
+  <div class="bt_bb_section_bottom_section_coverage_image">
+    <img src="assets/images/wave.png" alt="Decorative wave design" class="img-fluid" />
+  </div>
+</section>
+
+<!-- Careers Section -->
+<section class="industries pb-5 bg-white mb-md-0 vision">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7" data-aos="flip-right" data-aos-offset="300" data-aos-duration="500"
+        data-aos-easing="ease-in-sine">
+        <div class="d-flex h-100 mt-3 mt-md-5 me-md-5 text-start flex-column justify-content-center">
+          <h3 class="sub-heading text-blue fw-bold">Careers at Invictus</h3>
+          <p>
+            At Invictus Solutions, our employees are the key to our success. We
+            are always looking for talented, driven individuals to join our
+            team. Our company culture is focused on collaboration, innovation,
+            and continuous learning.
+          </p>
+          <p>
+            We offer a range of benefits to our employees, including competitive
+            salaries, flexible work schedules, and opportunities for
+            professional development. We are proud to be an equal-opportunity
+            employer and welcome candidates from diverse backgrounds to apply
+            for roles at our company.
+          </p>
+          <p>
+            If you are passionate about Software Industry and want to make a
+            difference, we encourage you to explore the career opportunities
+            available at Invictus.
+          </p>
+          <div>
+            <button type="submit" class="btn btn-primary btn-sm rounded-pill px-3 text-center"
+              (click)="open(content, '', 'all')">
+              Be A Part Of Our Team
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="wrapper my-5 position-relative">
+          <img src="assets/images/industries/circle 2.png" alt="" data-aos="fade-left" data-aos-offset="300"
+            data-aos-duration="500" data-aos-easing="ease-in-sine" />
+          <img src="assets/images/industries/circle1.png" alt="" data-aos="fade-right" data-aos-offset="300"
+            data-aos-duration="500" data-aos-easing="ease-in-sine" />
+          <img src="assets/images/industries/circle3.png" alt="" data-aos="fade-left" data-aos-offset="300"
+            data-aos-duration="500" data-aos-easing="ease-in-sine" />
+          <img src="assets/images/career2.png" alt="" data-aos="fade-right" data-aos-offset="300"
+            data-aos-duration="500" data-aos-easing="ease-in-sine" />
+          <img src="assets/images/career1.png" alt="" data-aos="fade-down" data-aos-offset="300"
+            data-aos-duration="500" data-aos-easing="ease-in-sine" />
+          <img src="assets/images/career3.png" alt="" data-aos="fade-right" data-aos-offset="300"
+            data-aos-duration="500" data-aos-easing="ease-in-sine" />
+        </div>
+
+        <div class="mbl-img">
+          <img src="assets/images/industries-we-serve.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="job-listings">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <h2 class="sub-heading mb-4 text-blue fw-bold">Open Vacancies</h2>
+              <p *ngIf="careersList.length == 0">No open any vacancy</p>
+
+              <div ngbAccordion >
+                  <div ngbAccordionItem *ngFor="let c of careersList; let i = index" [id]="'panel-' + i">
+                      <h2 ngbAccordionHeader>
+                          <button ngbAccordionButton>{{ c.name }}</button>
+                      </h2>
+                      <div ngbAccordionCollapse>
+                          <div ngbAccordionBody>
+                              <div [innerHTML]="c.description" class="mb-3"></div>
+
+                              <div class="col-12">
+                                  <button type="submit" class="btn btn-primary btn-sm rounded-pill px-3 text-center"
+                                      (click)="open(content, c, 'jobs-listing')">
+                                      Apply Now
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Old card-based layout (commented out) -->
+              <!-- <div class="card border-0 shadow p-3 rounded-5 mb-4" *ngFor="let c of careersList; let i=index;">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-2">
+                      <h3 class="text-blue fw-bold fs-3">{{c.name}}</h3>
+                    </div>
+                    <div class="col-md-8">
+                      {{c.description}}
+                    </div>
+                    <div class="col-md-2">
+                      <div class="d-flex h-100 justify-content-center align-items-center">
+                        <button type="submit" class="btn btn-primary rounded-pill fs-5 px-4 py-2 text-center"
+                            (click)="open(content, c)">
+                          Apply Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="about-us">
+  <div class="container">
+      <div class="row industries">
+          <div class="col-md-6" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500"
+              data-aos-easing="ease-in-sine">
+              <div class="d-flex h-100 flex-column justify-content-center">
+                  <h3 class="sub-heading text-blue fw-bold">Our Mission</h3>
+                  <p>
+                      Our mission at Invictus Solutions is to design and develop
+                      innovative software solutions that solve real-world problems and
+                      enhance the lives of our users. We strive to create a collaborative
+                      and inclusive work environment where our team members can grow and
+                      thrive, and we are committed to delivering exceptional products and
+                      services to our clients. We believe that technology has the power to
+                      transform industries and make the world a better place, and it is
+                      our goal to be at the forefront of this evolution. That’s why we are
+                      offering:
+                  </p>
+
+                  <ul class="list-unstyled">
+                      <li class="mb-3 d-flex align-items-center">
+                          <i class="fas fa-check p-1 text-blue border border-primary rounded-circle me-3"></i>
+                          Gym Allowance
+                      </li>
+                      <li class="mb-3 d-flex align-items-center">
+                          <i class="fas fa-check p-1 text-blue border border-primary rounded-circle me-3"></i>
+                          Provident Fund
+                      </li>
+                      <li class="mb-3 d-flex align-items-center">
+                          <i class="fas fa-check p-1 text-blue border border-primary rounded-circle me-3"></i>
+                          Medical Coverage
+                      </li>
+
+                      <li class="mb-3 d-flex align-items-center">
+                          <i class="fas fa-check p-1 text-blue border border-primary rounded-circle me-3"></i>
+                          Annual Increment
+                      </li>
+
+                      <li class="mb-3 d-flex align-items-center">
+                          <i class="fas fa-check p-1 text-blue border border-primary rounded-circle me-3"></i>
+                          Performance-Based Promotions
+                      </li>
+
+                      <li class="mb-3 d-flex align-items-center">
+                          <i class="fas fa-check p-1 text-blue border border-primary rounded-circle me-3"></i>
+                          Paid Internships
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="wrapper mission-img text-center position-relative">
+                  <img src="assets/images/career4.png" width="55%" alt="" class="img-fluid" data-aos="fade-down"
+                      data-aos-offset="300" data-aos-duration="500" data-aos-easing="ease-in-sine" />
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<!-- Modal Template -->
+<ng-template #content let-modal>
+  <div class="modal-header bg-primary">
+    <h4 class="modal-title text-white">
+      @if (!isHidden && careerInfo) {
+        <span>{{ careerInfo.name }}</span>
+      }
+      @if (isHidden) {
+        <span>Be A Part Of Our Team</span>
+      }
+    </h4>
+    <button type="button" class="btn-close btn-close-white" (click)="modal.dismiss()"></button>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="modal-body">
+      <div class="row">
+        <!-- Name -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input 
+              type="text" 
+              formControlName="name" 
+              class="form-control" 
+              placeholder="Enter Name"
+              [ngClass]="{ 'is-invalid': form.get('name')?.invalid && form.get('name')?.touched }"
+            >
+            @if (form.get('name')?.invalid && form.get('name')?.touched) {
+              <div class="invalid-feedback">Name is required.</div>
+            }
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input 
+              type="email" 
+              formControlName="email" 
+              class="form-control" 
+              placeholder="Enter Email"
+              [ngClass]="{ 'is-invalid': form.get('email')?.invalid && form.get('email')?.touched }"
+            >
+            @if (form.get('email')?.invalid && form.get('email')?.touched) {
+              <div class="invalid-feedback">
+                @if (form.get('email')?.errors?.['required']) {
+                  <div>Email is required.</div>
+                }
+                @if (form.get('email')?.errors?.['email']) {
+                  <div>Invalid email format.</div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label class="form-label">Phone</label>
+            <input 
+              type="tel" 
+              formControlName="phone" 
+              class="form-control" 
+              placeholder="Enter Phone"
+              [ngClass]="{ 'is-invalid': form.get('phone')?.invalid && form.get('phone')?.touched }"
+            >
+            @if (form.get('phone')?.invalid && form.get('phone')?.touched) {
+              <div class="invalid-feedback">
+                @if (form.get('phone')?.errors?.['required']) {
+                  <div>Phone is required.</div>
+                }
+                @if (form.get('phone')?.errors?.['pattern']) {
+                  <div>Invalid phone number (10 digits).</div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Portfolio Link -->
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label class="form-label">Portfolio Link</label>
+            <input 
+              type="url" 
+              formControlName="portfolio_link" 
+              class="form-control" 
+              placeholder="Enter Portfolio Link"
+              [ngClass]="{ 'is-invalid': form.get('portfolio_link')?.invalid && form.get('portfolio_link')?.touched }"
+            >
+            @if (form.get('portfolio_link')?.invalid && form.get('portfolio_link')?.touched) {
+              <div class="invalid-feedback">
+                @if (form.get('portfolio_link')?.errors?.['required']) {
+                  <div>Portfolio link is required.</div>
+                }
+                @if (form.get('portfolio_link')?.errors?.['pattern']) {
+                  <div>Invalid URL (e.g., https://example.com).</div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="col-md-12">
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea 
+              formControlName="message" 
+              class="form-control" 
+              placeholder="Enter Message" 
+              rows="5"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Cancel</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</ng-template>

@@ -4,11 +4,12 @@ import blogs from '../blogdetail/blog_detail.json';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgxTypedWriterModule } from 'ngx-typed-writer';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
 @Component({
   selector: 'app-home',
   standalone:true,
-  imports:[RouterModule,CommonModule,NgxTypedWriterModule],
+  imports:[RouterModule,CommonModule,NgxTypedWriterModule,ReactiveFormsModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 
