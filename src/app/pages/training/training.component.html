@@ -1,0 +1,152 @@
+<section class="page-title-section training-banner">
+    <div class="c-3"></div>
+    <div
+      class="overlay d-flex flex-column align-items-center justify-content-center"
+    ></div>
+    <div class="bt_bb_section_bottom_section_coverage_image">
+      <img
+        src="assets/images/wave.png"
+        alt="bt_bb_section_bottom_section_coverage_image"
+        class="img-fluid"
+      />
+    </div>
+  </section>
+
+
+
+ <section class="privacy">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Join Free Hands-on Training Opportunity at Invictus Solutions</h3>
+        <p>
+          During this hands-on training program, you will learn practical skills from experts.
+          This training program will lead to a paid internship or job opportunity for good
+          performers and training certificates. Our focus is on high-demand and cutting-edge
+          technology areas. We currently offer the following **free** training courses in collaboration with NAVTTC:
+        </p>
+        <ul>
+          <li>Advanced Web Application Development</li>
+          <li>Artificial Intelligence (Machine Learning & Deep Learning)</li>
+        </ul>
+        <p>Limited seats available—apply now!</p>
+
+        <h3 class="sub-heading text-blue fw-bold">Paid Training</h3>
+        <p>
+          Our internship program is designed to provide real-world experience and expose interns to
+          the inner workings of our company. We believe internships help students apply their skills
+          in a professional setting while gaining valuable industry insights.
+        </p>
+
+        <button type="button" class="btn btn-primary px-3" (click)="openModal(content)">
+          Apply Now
+        </button>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="assets/images/paid-traning.jpg" alt="Training Image" class="img-fluid" style="height: 400px" />
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col-md-5">
+        <img src="assets/images/navttc.jpg" alt="NAVTTC" class="img-fluid" style="height: 400px" />
+      </div>
+      <div class="col-md-7">
+        <h3 class="sub-heading text-blue fw-bold">NAVTTC</h3>
+        <p>
+          Invictus Solutions provides training under NAVTTC, offering scholarships and stipends to selected candidates.
+          This program is designed to equip young individuals with practical technical skills, enhancing their career prospects.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Application Form Modal -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <button type="button" class="btn btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <!-- Course Field -->
+        <div class="col-md-6 mb-3">
+          <label for="course">Course</label>
+          <select formControlName="course_id" class="form-control">
+            @for ( course of courses; track course.id) {
+              <option [value]="course.id">{{ course.name }}</option>
+            }
+          </select>
+          @if (form.controls['course_id'].invalid && form.controls['course_id'].touched) {
+            <div class="text-danger">
+              Course is required
+            </div>
+          }
+        </div>
+
+        <!-- Name Field -->
+        <div class="col-md-6 mb-3">
+          <label for="name">Name</label>
+          <input type="text" formControlName="name" class="form-control" placeholder="Enter Name" />
+          @if (form.controls['name'].invalid && form.controls['name'].touched) {
+            <div class="text-danger">
+              Name is required
+            </div>
+          }
+        </div>
+
+        <!-- Email Field -->
+        <div class="col-md-6 mb-3">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" class="form-control" placeholder="Enter Email" />
+          @if (form.controls['email'].invalid && form.controls['email'].touched) {
+            <div class="text-danger">
+              @if (form.controls['email'].errors?.['required']) {
+                <div>Email is required.</div>
+              }
+              @if (form.controls['email'].errors?.['email']) {
+                <div>Enter a valid email address</div>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Phone Field -->
+        <div class="col-md-6 mb-3">
+          <label for="phone">Phone</label>
+          <input type="text" formControlName="phone" class="form-control" placeholder="Enter Phone" />
+          @if (form.controls['phone'].invalid && form.controls['phone'].touched) {
+            <div class="text-danger">
+              Phone number is required
+            </div>
+          }
+        </div>
+
+        <!-- Portfolio Link Field -->
+        <div class="col-md-6 mb-3">
+          <label for="portfolio_link">Portfolio Link</label>
+          <input type="text" formControlName="portfolio_link" class="form-control" placeholder="Enter Portfolio Link" />
+          @if (form.controls['portfolio_link'].invalid && form.controls['portfolio_link'].touched) {
+            <div class="text-danger">
+              Portfolio Link is required
+            </div>
+          }
+        </div>
+
+        <!-- Message Field -->
+        <div class="col-md-12 mb-3">
+          <label for="message">Message</label>
+          <textarea formControlName="message" class="form-control" rows="5" placeholder="Enter Message"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger me-3" (click)="modal.dismiss()">Cancel</button>
+        <button type="submit" class="btn btn-outline-dark" [disabled]="form.invalid">Submit</button>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+

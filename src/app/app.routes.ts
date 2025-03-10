@@ -11,7 +11,7 @@ import { ServicesComponent } from './pages/services/services.component';
 // import { ServicedetailComponent } from './servicedetail/servicedetail.component';
 // import { PortfoliodetailComponent } from './portfoliodetail/portfoliodetail.component';
 // import { BlogdetailComponent } from './blogdetail/blogdetail.component';
-// import { TrainingComponent } from './training/training.component';
+import { TrainingComponent } from './pages/training/training.component';
 import { CareerComponent } from './pages/career/career.component';
 // import { CareerPostComponent } from './career-post/career-post.component';
 
@@ -27,7 +27,7 @@ export const routes: Routes = [
 //   { path: 'service-detail', component: ServicedetailComponent },
 //   { path: 'portfolio-detail', component: PortfoliodetailComponent },
 //   { path: 'blog-detail', component: BlogdetailComponent },
-//   { path: 'trainings', component: TrainingComponent },
+  { path: 'trainings', component: TrainingComponent },
 //   { path: 'postjob', component: CareerPostComponent },
 ];
 
