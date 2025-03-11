@@ -9,13 +9,16 @@ import { ApiService } from '../../services/api.service';
   selector: 'app-training',
   templateUrl: './training.component.html',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   styleUrls: ['./training.component.scss'],
 })
 export class TrainingComponent implements OnInit {
   courses: any[] = [];
   form: FormGroup;
 
+
+
+  
   private toastr: ToastrService = inject(ToastrService)
   constructor(
     private apiService: ApiService,
@@ -68,4 +71,5 @@ export class TrainingComponent implements OnInit {
       }
     });
   }
+  
 }

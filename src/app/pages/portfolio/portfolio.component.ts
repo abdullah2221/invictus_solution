@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule,RouterModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })

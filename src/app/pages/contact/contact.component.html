@@ -1,0 +1,177 @@
+<section class="page-title-section contact-banner">
+    <div class="c-3"></div>
+    <div class="overlay d-flex flex-column align-items-center justify-content-center">
+      <h3>{{ title }}</h3>
+      <p>{{ subtitle }}</p>
+    </div>
+    <div class="bt_bb_section_bottom_section_coverage_image">
+      <img [src]="imageSrc" alt="Section Bottom Coverage Image" class="img-fluid">
+    </div>
+  </section>
+
+
+
+  <section class="contact-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 py-5">
+          <h3 class="sub-heading text-blue fw-bold">
+            Reach out to us in the nearest office.
+          </h3>
+          <span class="display-4 my-5">
+            +92 (041) 2408084
+          </span>
+          <div class="row mt-5">
+            <div class="col-sm-6">
+              <h2 class="fw-normal">Head Office</h2>
+              <h2 class="text-blue display-6 fw-bold">Faisalabad</h2>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-phone-alt me-3"></i> +92 (041) 2408084
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fab fa-whatsapp me-3"></i>
+                <a class="text-decoration-none text-dark" href="https://wa.me/923018663999">
+                  +923000880001
+                </a>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-envelope me-3"></i> info&#64;invictussolutions.co
+              </div>
+              <div class="d-flex align-items-start">
+                <i class="fas fa-map-marker-alt me-3 pe-1"></i> 101, Regency Arcade, The Mall, Faisalabad, Pakistan
+              </div>
+            </div>
+            <div class="col-sm-6 pt-5 pt-md-0">
+              <h2 class="fw-normal">Development Office</h2>
+              <h2 class="text-blue display-6 fw-bold">Faisalabad</h2>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fab fa-whatsapp me-3"></i>
+                <a class="text-decoration-none text-dark" href="https://wa.me/923018663999">
+                  +923000880001
+                </a>
+              </div>
+              <div class="d-flex align-items-center text-center mb-3">
+                <i class="fas fa-envelope me-3"></i> info&#64;invictussolutions.co
+              </div>
+              <div class="d-flex align-items-start">
+                <i class="fas fa-map-marker-alt me-3 pe-1"></i> 102-C, Peoples Colony # 1, D-Ground, Faisalabad, Pakistan.
+              </div>
+            </div>
+            <div class="col-sm-6 pt-5 mt-md-5 pt-md-0">
+              <h2 class="fw-normal">Sub Office</h2>
+              <h2 class="text-blue display-6 fw-bold">Lahore</h2>
+              <div class="d-flex align-items-center mb-3">
+                <i class="fab fa-whatsapp me-3"></i>
+                <a class="text-decoration-none text-dark" href="https://wa.me/923018663999">
+                  +923000880001
+                </a>
+              </div>
+              <div class="d-flex align-items-center text-center mb-3">
+                <i class="fas fa-envelope me-3"></i> info&#64;invictussolutions.co
+              </div>
+              <div class="d-flex align-items-start">
+                <i class="fas fa-map-marker-alt me-3 pe-1"></i> Office # 1101, 1102, 11th floor, Tricon Corporate Office, Block H, Gulberg II, Lahore, Pakistan
+              </div>
+            </div>
+            <div class="col-sm-6 pt-5 mt-md-5 pt-md-0">
+              <h2 class="fw-normal">Sub Office</h2>
+              <h2 class="text-blue display-6 fw-bold">USA</h2>
+              <div class="d-flex align-items-center text-center mb-3">
+                <i class="fas fa-envelope me-3"></i> info&#64;invictussolutions.co
+              </div>
+              <div class="d-flex align-items-start">
+                <i class="fas fa-map-marker-alt me-3 pe-1"></i> 1659 Scott Blvd. Suite 255 Santa Clara, CA 95050
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-light position-relative contact-form h-100 p-3 p-md-5">
+            <h3 class="sub-heading text-blue fw-bold">Contact Us</h3>
+            <h2 class="h2 fw-normal mb-5">
+              Leave us a little info, and we'll be in touch.
+            </h2>
+            <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData)" class="wrapper3 text-end">
+              <div class="mb-4">
+                @if (res()?.name) {
+                <span class="text-danger float-end">{{ res().name }}</span>
+                }
+                <input
+                  type="text"
+                  class="form-control rounded-pill"
+                  name="name"
+                  formControlName="name"
+                  placeholder="Name Here"
+                />
+              </div>
+              <div class="mb-4">
+                @if (res()?.email) {
+                <span class="text-danger float-end">{{ res().email }}</span>
+                }
+                <input
+                  type="email"
+                  class="form-control rounded-pill"
+                  name="email"
+                  formControlName="email"
+                  placeholder="Email Here"
+                />
+              </div>
+              <div class="mb-4">
+                @if (res()?.subject) {
+                <span class="text-danger float-end">{{ res().subject }}</span>
+                }
+                <input
+                  type="text"
+                  class="form-control rounded-pill"
+                  name="subject"
+                  formControlName="subject"
+                  placeholder="Subject Here"
+                />
+              </div>
+              <div class="mb-4">
+                @if (res()?.message) {
+                <span class="text-danger float-end">{{ res().message }}</span>
+                }
+                <textarea
+                  class="form-control"
+                  placeholder="Project Details"
+                  formControlName="message"
+                  name="message"
+                  rows="8"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill px-4">Submit</button>
+            </form>
+  
+            @if (alertmessage()) {
+            <div class="wrapper-animation">
+              <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+              </svg>
+              <span class="text-primary">{{ positive() }}</span>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+  
+      <div class="row mt-5">
+        <div class="col-12">
+          <div style="width: 100%">
+            <iframe
+              width="100%"
+              height="400"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7705280794507!2d73.08633500901229!3d31.420447851968508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922681fc3cf4ea7%3A0xc0200cb3208df0c9!2s101%20Regency%20Rd%2C%20Faisalabad%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1708508439629!5m2!1sen!2s"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
