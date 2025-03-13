@@ -26,4 +26,9 @@ export class HomeComponent implements OnInit {
   
   }
 
+  stripHtml(html: string): string {
+    return html.replace(/<[^>]*>/g, ''); // Removes all HTML tags
+  }
+  
+
 }

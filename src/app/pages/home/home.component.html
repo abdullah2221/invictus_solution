@@ -340,7 +340,8 @@
                 <div class="card-body">
                   <span>{{ item?.date }}</span>
                   <h4 class="card-title mt-2">{{ item?.name }}</h4>
-                  <p class="card-text" [innerHTML]="item?.desc"></p>
+                      <!-- 👇 This will render HTML but limit text -->
+              <p class="card-text">{{ stripHtml(item.desc) | slice: 0:150 }}...</p>
                   <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item?.slug }" class="mt-4 d-flex align-items-center">
                     Read More <i class="fas fa-chevron-right border hvr-icon border-dark rounded-circle ms-2"></i>
                   </a>
