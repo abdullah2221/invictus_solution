@@ -8,7 +8,7 @@
       </p>
     </div>
     <div class="bt_bb_section_bottom_section_coverage_image">
-      <img [src]="'assets/images/wave-grey.png'" alt="Wave Grey Image" class="img-fluid" />
+      <img [src]="'assets/images/waves/wave-grey.png'" alt="Wave Grey Image" class="img-fluid" />
     </div>
   </section>
   
@@ -19,7 +19,7 @@
           <div class="img-group">
             <div class="c1"></div>
             <div class="c2"></div>
-            <img [src]="'assets/images/CEO.png'" class="img-fluid ceo-img" alt="CEO Image" />
+            <img [src]="'assets/images/about/CEO.png'" class="img-fluid ceo-img" alt="CEO Image" />
           </div>
         </div>
         <div class="col-lg-8">
@@ -42,10 +42,10 @@
       <div class="row">
         @for ( card of ceoCards; track card.id) {
           <div class="col-lg-4 mb-5 mb-lg-0 col-md-6">
-            <div class="card h-100 shadow" [attr.data-aos]="'fade-up'" [attr.data-aos-duration]="card.duration">
+            <div class="card h-100 shadow" [class.yellow]="card.id === 2" [attr.data-aos]="'fade-up'" [attr.data-aos-duration]="card.duration">
               <div class="card-body py-4 px-5">
                 <div class="mb-4">
-                  <img [src]="'assets/images/trust icon.png'" alt="Trust Icon" />
+                  <img [src]="'assets/images/about/trust icon.png'" alt="Trust Icon" />
                 </div>
                 <h6 class="text-blue mt-4">{{ card.title }}</h6>
                 <p class="description">{{ card.description }}</p>
@@ -62,7 +62,7 @@
       <div class="row">
         <div class="col-lg-6">
           <img class="iso-picture img-fluid" [attr.data-aos]="'fade-up'" [attr.data-aos-duration]="'300'"
-            [src]="'assets/images/iso-certified.png'" alt="ISO Certified" />
+            [src]="'assets/images/about/iso-certified.png'" alt="ISO Certified" />
         </div>
   
         <div class="col-lg-6 mt-5" [attr.data-aos]="'fade-right'" [attr.data-aos-duration]="'500'">
@@ -103,7 +103,7 @@
             }
           </div>
           <div class="mbl-img">
-            <img [src]="'assets/images/Stratgy-image.png'" class="img-fluid" />
+            <img [src]="'assets/images/Stratgy/Stratgy-image.png'" class="img-fluid" />
           </div>
         </div>
       </div>
@@ -143,7 +143,7 @@
               aosEasing="ease-in-sine"
             />
             <img
-              [src]="'assets/images/Layer85.png'"
+              [src]="'assets/images/industries/Layer85.png'"
               alt=""
               aos
               aosAnimation="fade-right"
@@ -152,7 +152,7 @@
               aosEasing="ease-in-sine"
             />
             <img
-              [src]="'assets/images/Layer84.png'"
+              [src]="'assets/images/industries/Layer84.png'"
               alt=""
               aos
               aosAnimation="fade-down"
@@ -161,7 +161,7 @@
               aosEasing="ease-in-sine"
             />
             <img
-              [src]="'assets/images/Layer86.png'"
+              [src]="'assets/images/industries/Layer86.png'"
               alt=""
               aos
               aosAnimation="fade-right"
@@ -173,7 +173,7 @@
   
           <div class="mbl-img">
             <img
-              [src]="'assets/images/industries-we serve.png'"
+              [src]="'assets/images/industries/industries-we serve.png'"
               alt=""
               class="img-fluid"
             />

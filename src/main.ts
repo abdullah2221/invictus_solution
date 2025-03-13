@@ -9,7 +9,7 @@ import { provideToastr } from 'ngx-toastr';
 // Add this line to provide HttpClient globally
 export const appProviders = [
   provideClientHydration(),
-  provideHttpClient(withFetch()),  // <-- This is mandatory
+  provideHttpClient(),  // <-- This is mandatory
   provideAnimations(),
   provideToastr(),
 ];

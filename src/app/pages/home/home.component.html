@@ -2,16 +2,24 @@
   <div class="c-3"></div>
   <div class="overlay d-flex flex-column align-items-center justify-content-center">
       <div class="content d-flex align-items-center">
-        <!-- <ngx-typed-writer 
-        text="['Meet Tomorrow Today']" 
-        [typeSpeed]="200" 
-        [deleteSpeed]="200">
-    </ngx-typed-writer> -->
+   
+    <!-- <h3 class="text-white text-xl">
     <ngx-typed-writer 
     [strings]="['Meet Tomorrow Today']" 
     [typeSpeed]="200" 
     [backSpeed]="200">
 </ngx-typed-writer>
+</h3>
+     -->
+
+     <h1 class="text-white text-xl flex items-center gap-2">
+       <ngx-typed-writer 
+       [strings]="['Meet Tomorrow Today']" 
+       [typeSpeed]="200" 
+       [backSpeed]="200">
+      </ngx-typed-writer>
+      <img src="assets/images/icons/circles.png" alt="Logo" class="w-8 h-8" />
+    </h1>
     
       
         </div>
@@ -22,7 +30,7 @@
       </div>
   </div>
   <div class="bt_bb_section_bottom_section_coverage_image">
-      <img src="assets/images/wave.png" alt="bt_bb_section_bottom_section_coverage_image" class="img-fluid">
+      <img src="assets/images/waves/wave.png"alt="bt_bb_section_bottom_section_coverage_image" class="img-fluid">
   </div>
   <div class="c-1"></div>
   <div class="c-2"></div>
@@ -71,7 +79,7 @@
 <section class="portfolio pt-5" id="portfolio">
     <div class="container">
         <div class="row">
-            <img src="assets/images/Girl.png" alt="Girl" class="img-fluid girl px-0">
+            <img src="assets/images/hero/Girl.png" alt="Girl" class="img-fluid girl px-0">
             <h2 class="heading text-white text-center" data-aos="flip-down" data-aos-offset="300"
                 data-aos-duration="500" data-aos-easing="ease-in-sine">
                 Feature Work
@@ -111,7 +119,7 @@
 
                 <div class="timeline" data-aos="flip-down" data-aos-offset="300" data-aos-duration="500"
                     data-aos-easing="ease-in-sine">
-                    <div class="timeline-icon"><img src="assets/images/HRMS.png" alt="HR Connect"></div>
+                    <div class="timeline-icon"><img src="assets/images/hero/HRMS.png" alt="HR Connect"></div>
                     <div class="timeline-content">
                         <h3 class="title">HR Connect <span>June 2020</span></h3>
                         <p class="description">
@@ -123,7 +131,7 @@
 
                 <div class="timeline" data-aos="flip-down" data-aos-offset="300" data-aos-duration="500"
                     data-aos-easing="ease-in-sine">
-                    <div class="timeline-icon"><img src="assets/images/NICTUS.png" alt="Nictus"></div>
+                    <div class="timeline-icon"><img src="assets/images/hero/NICTUS.png" alt="Nictus"></div>
                     <div class="timeline-content">
                         <h3 class="title">Nictus <span>June 2020</span></h3>
                         <p class="description">
@@ -281,7 +289,7 @@
             <img src="assets/images/industries/Layer59.png" alt="" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-easing="ease-in-sine">
           </div>
           <div class="mbl-img">
-            <img src="assets/images/industries-we serve.png" alt="" class="img-fluid">
+            <img src="assets/images/industries/industries-we serve.png" alt="" class="img-fluid">
           </div>
         </div>
   
@@ -315,31 +323,34 @@
         </div>
       </div>
   
-      <div class="row mt-5" *ngIf="BlogDetails?.length">
-        @for (item of BlogDetails.slice(-3); track item?.id) {
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-5 hvr-icon-wobble-horizontal">
-              <div class="card-header p-0">
-                <img [src]="item?.img" class="card-img-top" alt="Blog Image">
-                <div class="overlay d-flex flex-column align-items-center justify-content-center">
-                  <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item?.slug }">
-                    <i class="fas fa-eye text-white display-6"></i>
+      <div class="row mt-5">
+        @if (BlogDetails.length) {
+          @for (item of BlogDetails.slice(-3); track item?.id) {
+            <div class="col-md-6 col-lg-4">
+              <div class="card mb-5 hvr-icon-wobble-horizontal">
+                <div class="card-header p-0">
+                  <img [src]="item?.img" class="card-img-top" alt="Blog Image">
+                  <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                    <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item?.slug }">
+                      <i class="fas fa-eye text-white display-6"></i>
+                    </a>
+                  </div>
+                </div>
+      
+                <div class="card-body">
+                  <span>{{ item?.date }}</span>
+                  <h4 class="card-title mt-2">{{ item?.name }}</h4>
+                  <p class="card-text" [innerHTML]="item?.desc"></p>
+                  <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item?.slug }" class="mt-4 d-flex align-items-center">
+                    Read More <i class="fas fa-chevron-right border hvr-icon border-dark rounded-circle ms-2"></i>
                   </a>
                 </div>
               </div>
-      
-              <div class="card-body">
-                <span>{{ item?.date }}</span>
-                <h4 class="card-title mt-2">{{ item?.name }}</h4>
-                <p class="card-text" [innerHTML]="item?.desc"></p>
-                <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item?.slug }" class="mt-4 d-flex align-items-center">
-                  Read More <i class="fas fa-chevron-right border hvr-icon border-dark rounded-circle ms-2"></i>
-                </a>
-              </div>
             </div>
-          </div>
+          }
         }
       </div>
+      
       
     </div>
   </section>

@@ -6,7 +6,8 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private http = inject(HttpClient);
+ 
+  constructor(private http: HttpClient) {} 
   private apiURL =  'https://api.invictussolutions.co/';
 
   private get headers() {

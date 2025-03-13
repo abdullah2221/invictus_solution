@@ -10,9 +10,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class AboutComponent {
   ceoCards = [
-    { id: 1, title: 'Trust Only The Power of Ideas', description: 'Ideas can come from anybody...', duration: '500' },
-    { id: 2, title: 'Be comfortable with risks!', description: 'Pioneers are those who are never afraid...', duration: '800' },
-    { id: 3, title: 'Culture breeds talent!', description: 'From visionaries to influencers...', duration: '1000' }
+    { id: 1, title: 'Trust Only The Power of Ideas', description: 'Ideas can come from anybody, no matter what gender, age, race, socioeconomic background, or education level', duration: '500' },
+    { id: 2, title: 'Be comfortable with risks!', description: 'Pioneers are those who are never afraid of taking risks so we encourage you to be a pioneer, if you want to be anything at all.', duration: '800' },
+    { id: 3, title: 'Culture breeds talent!', description: 'From visionaries to influencers and from enablers to dreamers we believe in the collective power of talent. Best way to unleash the power', duration: '1000' }
   ];
 
   missionList = [
@@ -26,19 +26,19 @@ export class AboutComponent {
     { id: 1, src: 'Stratgy/circle1.png', animation: 'fade-left' },
     { id: 2, src: 'Stratgy/circle2.png', animation: 'fade-right' },
     { id: 3, src: 'Stratgy/circle3.png', animation: 'fade-left' },
-    { id: 4, src: 'Layer79.png', animation: 'fade-right' },
-    { id: 5, src: 'Layer77.png', animation: 'fade-down' },
-    { id: 6, src: 'Layer78.png', animation: 'fade-right' }
+    { id: 4, src: 'Stratgy/Layer79.png', animation: 'fade-right' },
+    { id: 5, src: 'Stratgy/Layer77.png', animation: 'fade-down' },
+    { id: 6, src: 'Stratgy/Layer78.png', animation: 'fade-right' }
   ];
 
 
   affiliations = [
-    {id:1, imgSrc: 'assets/images/fitco.jpg', isYellow: false },
-    {id:2, imgSrc: 'assets/images/SIP-logo.jpg', isYellow: true },
-    {id:3, imgSrc: 'assets/images/osfp-logo.jpg', isYellow: false },
-    {id:4, imgSrc: 'assets/images/pseb-logo.jpg', isYellow: false },
-    {id:5, imgSrc: 'assets/images/logo2.jpg', isYellow: true },
-    {id:6, imgSrc: 'assets/images/pasha-logo.jpg', isYellow: false },
+    {id:1, imgSrc: 'assets/images/affiliations/fitco.jpg', isYellow: false },
+    {id:2, imgSrc: 'assets/images/affiliations/SIP-logo.jpg', isYellow: true },
+    {id:3, imgSrc: 'assets/images/affiliations/osfp-logo.jpg', isYellow: false },
+    {id:4, imgSrc: 'assets/images/affiliations/pseb-logo.jpg', isYellow: false },
+    {id:5, imgSrc: 'assets/images/affiliations/logo2.jpg', isYellow: true },
+    {id:6, imgSrc: 'assets/images/affiliations/pasha-logo.jpg', isYellow: false },
   ];
 
 

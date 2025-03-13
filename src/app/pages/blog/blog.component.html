@@ -1,50 +1,52 @@
 <section class="page-title-section blog-banner">
-    <div class="c-3"></div>
-    <div class="overlay  d-flex flex-column align-items-center justify-content-center">
-        <h3>
-           Our Blog
-        </h3>
-       <p>
-        Company news & random thoughts
-       </p>
-    </div>
-    <div class="bt_bb_section_bottom_section_coverage_image">
-        <img src="assets/images/wave.png"
-            alt="bt_bb_section_bottom_section_coverage_image" class="img-fluid">
-    </div>
-  
-  </section>
+  <div class="c-3"></div>
+  <div class="overlay  d-flex flex-column align-items-center justify-content-center">
+      <h3>
+         Our Blog
+      </h3>
+     <p>
+      Company news & random thoughts
+     </p>
+  </div>
+  <div class="bt_bb_section_bottom_section_coverage_image">
+      <img src="assets/images/waves/wave.png"
+          alt="bt_bb_section_bottom_section_coverage_image" class="img-fluid">
+  </div>
 
-  <section class="blog">
-    <div class="container">
-      <div class="row mb-5">
-        @for (item of BlogDetails; track item.id) {
-          <div class="col-md-6 col-lg-4">
-            <div class="card mb-5 hvr-icon-wobble-horizontal">
-              <div class="card-header p-0 position-relative">
-                <img [src]="item.img" class="card-img-top" alt="Blog Image">
-                <div class="overlay d-flex flex-column align-items-center justify-content-center">
-                  <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item.slug }">
-                    <i class="fas fa-eye text-white display-6"></i>
-                  </a>
-                </div>
-              </div>
-  
-              <div class="card-body d-flex flex-column">
-                <span>{{ item.date }}</span>
-                <h4 class="card-title mt-2">{{ item.name }}</h4>
-                <p class="card-text" [innerHTML]="item.desc"></p>
-                <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item.slug }"
-                  class="mt-auto d-flex align-items-center">Read More
-                  <i class="fas fa-chevron-right border hvr-icon border-dark rounded-circle ms-2"></i>
+</section>
+
+<section class="blog">
+  <div class="container">
+    <div class="row mb-5">
+      @for (item of BlogDetails; track item.id) {
+        <div class="col-md-6 col-lg-4">
+          <div class="card mb-5 hvr-icon-wobble-horizontal">
+            <div class="card-header p-0 position-relative">
+              <img [src]="item.img" class="card-img-top" alt="Blog Image">
+              <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item.slug }">
+                  <i class="fas fa-eye text-white display-6"></i>
                 </a>
               </div>
             </div>
+
+            <div class="card-body d-flex flex-column">
+              <span>{{ item.date }}</span>
+              <h4 class="card-title mt-2">{{ item.name }}</h4>
+              <!-- 👇 This will render HTML but limit text -->
+              <p class="card-text">{{ stripHtml(item.desc) | slice: 0:150 }}...</p>
+
+              <a [routerLink]="['/blog-detail']" [queryParams]="{ slug: item.slug }"
+                class="mt-auto d-flex align-items-center">Read More
+                <i class="fas fa-chevron-right border hvr-icon border-dark rounded-circle ms-2"></i>
+              </a>
+            </div>
           </div>
-        }
-      </div>
+        </div>
+      }
     </div>
-  </section>
-  
-  
-  
+  </div>
+</section>
+
+
+
