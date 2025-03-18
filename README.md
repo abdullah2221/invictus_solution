@@ -29,7 +29,7 @@ The application provides the following key features:
 ## 3. Technology Stack
 
 *   **Frontend:**
-    *   Angular (v17)
+    *   Angular (v18)
     *   Angular Router
     *   Angular Forms (ReactiveFormsModule)
     *   Angular Common Module
