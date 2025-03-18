@@ -2,12 +2,18 @@
   <div class="c-3"></div>
   <div class="overlay d-flex flex-column align-items-center justify-content-center">
     <div class="content d-flex align-items-center">
-      <h1 class="text-white text-xl flex items-center add">
+      <h1 class="text-white flex items-center">
         <ngx-typed-writer 
-          [strings]="['Meet Tomorrow Today']" 
-          [typeSpeed]="200" 
-          [backSpeed]="200">
-        </ngx-typed-writer>
+        [strings]="['Meet Tomorrow Today']" 
+        [typeSpeed]="200" 
+        [backSpeed]="100" 
+        [backDelay]="0" 
+        [smartBackspace]="false"
+        [loop]="true"> <!-- Ensures it fully restarts after erasing -->
+      </ngx-typed-writer>
+      
+      
+      
         <img src="assets/images/icons/circles.png" alt="Logo" class="w-8 h-8" />
       </h1>
     </div>
