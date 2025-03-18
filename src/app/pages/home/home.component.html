@@ -4,16 +4,13 @@
     <div class="content d-flex align-items-center">
       <h1 class="text-white flex items-center">
         <ngx-typed-writer 
-        [strings]="['Meet Tomorrow Today']" 
-        [typeSpeed]="200" 
-        [backSpeed]="100" 
-        [backDelay]="0" 
-        [smartBackspace]="false"
-        [loop]="true"> <!-- Ensures it fully restarts after erasing -->
-      </ngx-typed-writer>
-      
-      
-      
+          [strings]="['Meet Tomorrow Today']" 
+          [typeSpeed]="200" 
+          [backSpeed]="100" 
+          [backDelay]="0" 
+          [smartBackspace]="false"
+          [loop]="true">
+        </ngx-typed-writer>
         <img src="assets/images/icons/circles.png" alt="Logo" class="w-8 h-8" />
       </h1>
     </div>
@@ -24,9 +21,9 @@
     </div>
   </div>
 
-  <!-- Updated Inline SVG -->
+  <!-- ✅ Updated SVG Wave with Position Fix -->
   <div class="bt_bb_section_bottom_section_coverage_image">
-    <svg class="img-fluid" width="1434" height="284" viewBox="0 0 1434 284" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="img-fluid" width="1434" height="284" viewBox="0 0 1434 284" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 6.5C226 -49 425.5 283.1 602.5 271C779.5 258.9 784.1 196.7 906.5 177C982 164.8 1061 262 1180 278.8C1255.4 289.5 1343 177 1434 127V284H0V6.5Z" fill="#FFFFFF"/>
     </svg>
   </div>
@@ -34,6 +31,7 @@
   <div class="c-1"></div>
   <div class="c-2"></div>
 </section>
+
 
 
 

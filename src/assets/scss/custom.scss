@@ -559,60 +559,68 @@ text-decoration: none;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+
     p {
         font-size: 24px;
     }
-    .bt_bb_section_bottom_section_coverage_image {
-        bottom: -1px;
-    }
-    .content{
-      min-height: 200px;
-      width: 40%;
-      .text {
-        font-size: 71px !important;
-        color: white !important;
-        font-family: "Heebo", sans-serif;
-        font-weight: bold;
-        font-style: normal;
-        &.blink{
-          font-size: 50px !important;
+
+    .content {
+        min-height: 200px;
+        width: 40%;
+        
+        .text {
+            font-size: 71px !important;
+            color: white !important;
+            font-family: "Heebo", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+
+            &.blink {
+                font-size: 50px !important;
+            }
+        }
+
+        div {
+            &::after {
+                content: '';
+                height: 100px;
+                width: 100px;
+                background: url("/assets/images/icons/circles.png") no-repeat;
+                position: absolute;
+                margin-left: 8px;
+                background-size: 65px;
+                margin-top: 20px;
+            }
         }
     }
-    div{
-      &::after{
-        content: '';
-          height: 100px;
-          width: 100px;
-          background: url("/assets/images/icons/circles.png") no-repeat;
-          position: absolute;
-          margin-left: 8px;
-          background-size: 65px;
-          margin-top: 20px;
-      }
-    }
-    }
-    .w-40{
-      width: 40%;
+
+    .w-40 {
+        width: 40%;
     }
 
     .bt_bb_section_bottom_section_coverage_image {
         position: absolute;
         right: 0;
         left: 0;
-        pointer-events: none;
-        z-index: 0;
         bottom: 0;
-        img {
+        pointer-events: none;
+        z-index: 1;
+
+        svg {
+            display: block;
             width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: -2px; // ✅ FIX: Ensures no gap appears under the SVG wave
+            left: 0;
         }
     }
+
     .c-1 {
         position: absolute;
         bottom: -20px;
-
         width: 337px;
         height: 337px;
-        background: rgb(101, 45, 144);
         background: linear-gradient(180deg, rgba(101, 45, 144, 1) 49%, rgba(0, 99, 175, 1) 100%);
         animation: float 6s ease-in-out infinite;
         border-radius: 50%;
@@ -622,14 +630,12 @@ text-decoration: none;
     .c-2 {
         width: 337px;
         height: 337px;
-        background: rgb(101, 45, 144);
         background: linear-gradient(180deg, rgba(254, 242, 0, 1) 49%, rgb(101, 45, 144) 100%);
         border-radius: 50%;
         opacity: 0.5;
         position: absolute;
         right: 20px;
         bottom: -138px;
-
         animation: float 4s ease-in-out infinite;
     }
 
@@ -642,7 +648,6 @@ text-decoration: none;
         position: absolute;
         top: -35%;
         left: 75px;
-
         animation: floatx 8s ease-in-out infinite;
     }
 
@@ -652,6 +657,7 @@ text-decoration: none;
         height: 100%;
     }
 }
+
 
 // .page-title-section{
 //     overflow: hidden;
