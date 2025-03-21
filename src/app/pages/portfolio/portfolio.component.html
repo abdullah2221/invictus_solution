@@ -61,11 +61,12 @@
                     <div class="card mb-md-0 h-100 hvr-icon-wobble-horizontal w-100">
                         <div class="card-header p-0">
                             <img [src]="project.img" class="card-img-top" alt="{{ project.title }}" />
-                            @if (project.url) {
-                                <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                            <div class="overlay d-flex flex-column align-items-center justify-content-center">
+                                @if (project.url) {
                                     <a [href]="project.url" target="_blank" class="text-white">Visit Now</a>
-                                </div>
-                            }
+                                }
+                            </div>
+                            
                         </div>
             
                         <div class="card-body text-center">
