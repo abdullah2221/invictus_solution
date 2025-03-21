@@ -100,3 +100,9 @@
   }
 }
 
+
+.form-control {
+  z-index: 2; // Ensures the input is above the button
+  pointer-events: auto; // Enables interaction with the input field
+  // Takes up full width
+}

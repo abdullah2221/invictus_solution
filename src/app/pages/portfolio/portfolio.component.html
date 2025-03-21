@@ -6,12 +6,12 @@
         </h6>
         <form [formGroup]="FormData" method="POST" (ngSubmit)="onSubmit()">
             <div class="input-group mb-3">
-                <input type="email" name="email" formControlName="email" class="form-control rounded-pill"
-                    placeholder="Enter Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                <input type="email" formControlName="email" class="form-control rounded-pill"
+                       placeholder="Enter Email" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                 <button type="submit" class="btn btn-primary rounded-pill input-group-text" id="basic-addon2">
-                    Request Free Consultation
+                  Request Free Consultation
                 </button>
-            </div>
+              </div>
 
             <!-- Show validation errors -->
             @if (res().length > 0) {

@@ -7,17 +7,16 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, RouterModule, ReactiveFormsModule,RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule, RouterModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
   private builder = inject(FormBuilder);
   private qoute = inject(QouteService);
+  FormData!: FormGroup; // FormGroup for form handling, initialized later in constructor
 
-  FormData: FormGroup = this.builder.nonNullable.group({
-    email: ['', [Validators.required, Validators.email]]
-  });
+ 
 
   errors = signal<string | null>(null);
   res = signal<string[]>([]);
@@ -131,30 +130,35 @@ export class PortfolioComponent {
       title: 'Customer Relationship Management',
       description: 'Development Technology used Laravel & MySQL'
     }
-  ];
+  ];constructor() {
+    this.FormData = this.builder.group({ // Initialize FormData here in the constructor
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
 
+  // Handle form submission
   onSubmit() {
-    if (this.FormData.invalid) return; // Stop API request if form is invalid
+    if (this.FormData.invalid) return; // Do nothing if form is invalid
 
     this.qoute.PostMessage(this.FormData.value).subscribe({
       next: (response) => {
-        this.sentemail.set(response);
-        this.alertmessage.set(true);
+        this.sentemail.set(response); // Set the response
+        this.alertmessage.set(true); // Show success alert
 
         try {
-          const jsonResponse = JSON.parse(this.sentemail() || '{}'); // Default to an empty object if null
+          const jsonResponse = JSON.parse(this.sentemail() || '{}');
           this.positive.set(jsonResponse.message || 'Your request has been sent successfully!');
         } catch (error) {
           console.error('Invalid JSON response:', error);
           this.positive.set('Your request has been sent successfully!');
         }
 
-        // Reset form after submission & hide alert after 5 seconds
+        // Reset form and hide alert after 5 seconds
         this.FormData.reset();
         setTimeout(() => this.alertmessage.set(false), 5000);
       },
       error: (error) => {
-        this.errors.set(error.error);
+        this.errors.set(error.error); // Store errors if any
 
         try {
           const parsedErrors = JSON.parse(this.errors() || '{}');
