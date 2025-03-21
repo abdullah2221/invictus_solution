@@ -68,7 +68,7 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="row">
         <!-- Course Field -->
-        <div class="col-md-6 mb-3">
+        <!-- <div class="col-md-6 mb-3">
           <label for="course">Course</label>
           <select formControlName="course_id" class="form-control">
             @for ( course of courses; track course.id) {
@@ -80,8 +80,37 @@
               Course is required
             </div>
           }
-        </div>
+        </div> -->
+       
+       
+       
+       
+       <!-- Course Dropdown with Search -->
+      <div class="col-md-6  mb-3">
+        <label for="course">Course</label>
+          <ng-select
+          [items]="courses"
+          bindLabel="name"
+          bindValue="id"
+          formControlName="course_id"
+          [typeahead]="courseSearch$"
+        
+          [clearable]="true"
+          [searchable]="true"
+          [addTag]="true"
+        >
+          <ng-template ng-option-tmp let-item="item">
+            {{ item.name }}
+          </ng-template>
+        </ng-select>
 
+  @if (form.controls['course_id'].invalid && form.controls['course_id'].touched) {
+    <div class="text-danger">Course is required</div>
+  }
+      </div>
+          
+        
+        
         <!-- Name Field -->
         <div class="col-md-6 mb-3">
           <label for="name">Name</label>
